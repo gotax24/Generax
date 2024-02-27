@@ -6,26 +6,29 @@ const generates = () => {
   let result = document.getElementById("result");
 
   let password = "";
-
   let caracteres = "abcdefghijklmnopqrstuvwxyz";
-  if (capital.checked) {
-    caracteres += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  }
-  if (number.checked) {
-    caracteres += "1234567890";
-  }
-  if (specialCharacters.checked) {
-    caracteres += '!"#$%&/()@';
-  }
+  if (quantity <= 0) {
+    alert("El numero no es valido");
+  } else {
+    if (capital.checked) {
+      caracteres += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    }
+    if (number.checked) {
+      caracteres += "1234567890";
+    }
+    if (specialCharacters.checked) {
+      caracteres += '!"#$%&/()@';
+    }
 
-  for (let i = 0; i < quantity; i++) {
-    password =
-      password + caracteres[Math.trunc(Math.random() * caracteres.length)];
+    for (let i = 0; i < quantity; i++) {
+      password =
+        password + caracteres[Math.trunc(Math.random() * caracteres.length)];
+    }
+
+    let resultado = (result.innerText = "Su contraseña es : " + password);
+
+    let reset = (quantity.value = "");
+
+    return resultado, reset;
   }
-
-  let resultado = (result.innerText = "Su contraseña es : " + password);
-
-  let reset = (quantity.value = "");
-  
-  return resultado, reset;
 };
