@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generax | Generador de contraseñas</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="password.png" type="image/x-icon">
+  </head>
+  <body>
+    <h1 class="title">Generax</h1>
+    <h2 class="sub-title">Tu generador de contraseñas de confianza</h2>
+    <div class="container-main">
+      <input type="number" id="quantity" class="input" placeholder="Cantidad" />
+      <div id="checklist">
+        <input value="1" name="r" type="checkbox" id="capital" />
+        <label for="capital">Mayusculas</label>
+        <input value="2" name="r" type="checkbox" id="number" />
+        <label for="number">Numeros</label>
+        <input value="3" name="r" type="checkbox" id="specialCharacters" />
+        <label for="specialCharacters">Caracteres especiales</label>
+      </div>
+
+      <button class="btn" onclick="generates()">Generar contraseña</button>
+      <p class="result" id="result"></p>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
