@@ -34,17 +34,27 @@ body {
 }
 
 /*----------------------------------------input----------------------------------------- */
+.container-input{
+  text-align: center;
+  font-size: 18px;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+}
+
+.container-input label{
+  padding-bottom: 10px;
+  display: block;
+  color: #414856;
+}
 
 .input {
-  display: block;
-  margin-top: 20px;
   margin: 0 auto;
   color: #5b595d;
   border: 2px solid #f8f8f8;
   border-radius: 10px;
   padding: 10px 25px;
   background: transparent;
-  max-width: 190px;
+  max-width: 100px;
   font-size: 14px;
 }
 
@@ -53,6 +63,14 @@ body {
 }
 
 /*-----------------------------Checkbox------------------------------------------------------------------*/
+
+.desc{
+  text-align: center;
+  font-size: 18px;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  color: #414856;
+}
 
 #checklist {
   --background: #fff;

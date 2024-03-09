@@ -5,13 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Generax | Generador de contraseñas</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="password.png" type="image/x-icon">
+    <link rel="shortcut icon" href="password.png" type="image/x-icon" />
   </head>
   <body>
     <h1 class="title">Generax</h1>
     <h2 class="sub-title">Tu generador de contraseñas de confianza</h2>
     <div class="container-main">
-      <input type="number" id="quantity" class="input" placeholder="Cantidad" />
+      <div class="container-input">
+        <label>
+          Ingrese la cantidad de caracteres:
+          <input type="number" id="quantity" class="input" />
+        </label>
+      </div>
+      <p class="desc">Seleccione lo que desea que contenga:</p>
       <div id="checklist">
         <input value="1" name="r" type="checkbox" id="capital" />
         <label for="capital">Mayusculas</label>
