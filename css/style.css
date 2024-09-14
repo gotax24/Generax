@@ -361,3 +361,37 @@ body {
   color: var(--color-background-light);
   text-align: center;
 }
+
+.credits {
+  display: grid;
+  place-items: center; /* Centra horizontal y verticalmente */
+  width: 100%;
+  min-height: 250px;
+}
+
+.social-network-icons {
+  margin-bottom: 10px;
+  margin-top: auto;
+}
+
+.svg-footer {
+  height: 60px;
+  width: 60px;
+  transition: fill 0.3s, stroke 0.3s, transform 0.3s ease;
+}
+
+.credits .link-networks {
+  margin-right: 15px;
+}
+
+.copyright {
+  font-size: 18px;
+  color: #000000;
+}
+
+.svg-footer:hover {
+  fill: #7d7d7d;
+  stroke: #7d7d7d;
+  transform: scale(1.1); /* Cambio más suave, menos agresivo */
+  transition: transform 0.3s ease-in-out, fill 0.3s ease-in-out;
+}
