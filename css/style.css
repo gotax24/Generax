@@ -1,56 +1,73 @@
-body {
-  background-color: #ffffff;
+:root {
+  --color-primary: #414856;
+  --color-secondary: #5b595d;
+  --color-background-dark: #080808;
+  --color-background-light: #ffffff;
+  --color-shadow-light: #dee0ec;
+  --color-shadow-dark: #9a9ca4;
+  --color-check: #59595a;
+  --color-disabled: #c3c8de;
 }
 
-/*---------------------------------h1-------------------------------*/
-.title{
+/*---------------------------------Body-------------------------------*/
+body {
+  background-color: var(--color-background-light);
+}
+
+/*---------------------------------Título-------------------------------*/
+.title {
   text-align: center;
   font-size: 36px;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   font-style: italic;
-  color: #414856;
+  color: var(--color-primary);
 }
 
-.sub-title{
+.sub-title {
   text-align: center;
   font-size: 24px;
   font-style: italic;
-  font-family: 'Times New Roman', Times, serif;
-  color: #414856  ;
+  font-family: "Times New Roman", Times, serif;
+  color: var(--color-primary);
 }
 
 /*----------------------------------Contenedor-------------------------------------------------*/
-
 .container-main {
   display: block;
   padding-top: 20px;
   margin: 0 auto;
-  background-color: #080808;
+  background-color: var(--color-background-dark);
+  max-width: 90%;
   width: 600px;
   height: 500px;
   border-radius: 46px;
-  background: linear-gradient(145deg, #a9abb4, #c9cbd6);
-  box-shadow: 23px 23px 46px #9a9ca4, -23px -23px 46px #dee0ec;
+  background: linear-gradient(
+    145deg,
+    var(--color-shadow-dark),
+    var(--color-shadow-light)
+  );
+  box-shadow: 23px 23px 46px var(--color-shadow-dark),
+    -23px -23px 46px var(--color-shadow-light);
 }
 
-/*----------------------------------------input----------------------------------------- */
-.container-input{
+/*----------------------------------------Input----------------------------------------- */
+.container-input {
   text-align: center;
   font-size: 18px;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   font-style: italic;
 }
 
-.container-input label{
+.container-input label {
   padding-bottom: 10px;
   display: block;
-  color: #414856;
+  color: var(--color-primary);
 }
 
 .input {
   margin: 0 auto;
-  color: #5b595d;
-  border: 2px solid #f8f8f8;
+  color: var(--color-secondary);
+  border: 2px solid var(--color-background-light);
   border-radius: 10px;
   padding: 10px 25px;
   background: transparent;
@@ -59,15 +76,14 @@ body {
 }
 
 .input:active {
-  box-shadow: 2px 2px 15px #ffffff inset;
+  box-shadow: 2px 2px 8px var(--color-background-light) inset;
 }
 
 /*-----------------------------Checkbox------------------------------------------------------------------*/
-
-.desc{
+.desc {
   text-align: center;
   font-size: 18px;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   font-style: italic;
   color: #414856;
 }
@@ -131,8 +147,7 @@ body {
 }
 
 #checklist input[type="checkbox"] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
+  appearance: none;
   position: relative;
   height: 15px;
   width: 15px;
@@ -284,13 +299,9 @@ body {
       -14px -8px 0 0px #4f29f0;
   }
 }
-
-/*-------------------------------------Boton-----------------------------------------*/
-
+/*-------------------------------------Botón-----------------------------------------*/
 .btn {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin: 0 auto;
+  margin: 20px auto;
   position: relative;
   font-size: 17px;
   text-transform: uppercase;
@@ -303,12 +314,17 @@ body {
   font-family: inherit;
   font-weight: 500;
   color: black;
-  background-color: white;
+  background-color: var(--color-background-light);
 }
 
 .btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:focus {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
 }
 
 .btn:active {
@@ -330,7 +346,7 @@ body {
 }
 
 .btn::after {
-  background-color: #fff;
+  background-color: var(--color-background-light);
 }
 
 .btn:hover::after {
@@ -339,11 +355,9 @@ body {
 }
 
 /*------------------------p---------------------------------*/
-
-.result{
+.result {
   font-size: 24px;
-  font-family: 'Times New Roman', Times, serif;
-  color: #fff;
+  font-family: "Times New Roman", Times, serif;
+  color: var(--color-background-light);
   text-align: center;
-  
 }

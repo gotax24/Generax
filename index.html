@@ -7,33 +7,45 @@
     <meta name="keywords" content="contraseña, password, generax, generador" />
     <meta name="description" content="Un generador de contraseñas" />
     <title>Generax | Generador de contraseñas</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="password.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="img/password.png" type="image/x-icon" />
   </head>
   <body>
     <h1 class="title">Generax</h1>
     <h2 class="sub-title">Tu generador de contraseñas de confianza</h2>
-    <div class="container-main">
+    <main class="container-main">
       <div class="container-input">
-        <label>
-          Ingrese la cantidad de caracteres:
-          <input type="number" id="quantity" class="input" />
-        </label>
+        <label for="quantity"> Ingrese la cantidad de caracteres: </label>
+        <input
+          type="number"
+          id="quantity"
+          class="input"
+          min="1"
+          placeholder="Cantidad de caracteres"
+        />
       </div>
       <p class="desc">Seleccione lo que desea que contenga:</p>
       <div id="checklist">
-        <input value="1" name="r" type="checkbox" id="capital" />
-        <label for="capital">Mayusculas</label>
-        <input value="2" name="r" type="checkbox" id="number" />
-        <label for="number">Numeros</label>
-        <input value="3" name="r" type="checkbox" id="specialCharacters" />
+        <input value="1" type="checkbox" id="capital" />
+        <label for="capital">Mayúsculas</label>
+
+        <input value="2" type="checkbox" id="number" />
+        <label for="number">Números</label>
+
+        <input value="3" type="checkbox" id="specialCharacters" />
         <label for="specialCharacters">Caracteres especiales</label>
       </div>
 
-      <button class="btn" onclick="generates()">Generar contraseña</button>
+      <button
+        class="btn"
+        onclick="generates()"
+        aria-label="Generar contraseña aleatoria"
+      >
+        Generar contraseña
+      </button>
       <p class="result" id="result"></p>
-    </div>
+    </main>
 
-    <script src="app.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>
